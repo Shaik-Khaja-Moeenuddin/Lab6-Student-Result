@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Student Result Management System</h1>
+        <p>Enter student details and marks to calculate the result.</p>
+
+        <section class="panel">
+            <h2>Student Details</h2>
+
+            <form id="resultForm">
+                <div class="form-grid">
+
+                    <div>
+                        <label for="studentName">Student Name</label>
+                        <input type="text" id="studentName" required>
+                    </div>
+
+                    <div>
+                        <label for="rollNumber">Roll Number</label>
+                        <input type="text" id="rollNumber" required>
+                    </div>
+
+                    <div>
+                        <label for="english">English ( /100 )</label>
+                        <input type="number" id="english"
+                               min="0" max="100" step="1" required>
+                    </div>
+
+                    <div>
+                        <label for="maths">Mathematics ( /100 )</label>
+                        <input type="number" id="maths"
+                               min="0" max="100" step="1" required>
+                    </div>
+
+                    <div>
+                        <label for="science">Science ( /100 )</label>
+                        <input type="number" id="science"
+                               min="0" max="100" step="1" required>
+                    </div>
+
+                    <div>
+                        <label for="computer">Computer Science ( /100 )</label>
+                        <input type="number" id="computer"
+                               min="0" max="100" step="1" required>
+                    </div>
+
+                    <div>
+                        <label for="social">Social Studies ( /100 )</label>
+                        <input type="number" id="social"
+                               min="0" max="100" step="1" required>
+                    </div>
+
+                </div>
+
+                <div class="buttons">
+                    <button type="submit">Calculate Result</button>
+                    <button type="reset" class="secondary">Clear Form</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="panel">
+            <div class="heading">
+                <h2>Student Results</h2>
+                <button type="button" id="clearResults" class="secondary">
+                    Clear Results
+                </button>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Roll No.</th>
+                            <th>English</th>
+                            <th>Maths</th>
+                            <th>Science</th>
+                            <th>Computer</th>
+                            <th>Social</th>
+                            <th>Total</th>
+                            <th>Percentage</th>
+                            <th>Grade</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="resultsBody"></tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage">No results added yet.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
